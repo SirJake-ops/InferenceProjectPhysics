@@ -1,7 +1,5 @@
 # PhysicsClassInference
 
-Python port of the local ONNX inference project from `fictional-funicular`, with a CLI runtime instead of HTTP endpoints.
-
 ## Requirements
 
 - Python `3.11+`
