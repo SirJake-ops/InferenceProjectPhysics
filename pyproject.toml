@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "physics-class-inference"
 version = "0.1.0"
 description = "Python port of a local ONNX-based inference engine."
-readme = "PORT_MAP.md"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",
