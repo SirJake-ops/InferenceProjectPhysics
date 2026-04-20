@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physics-class-inference"
+version = "0.1.0"
+description = "Python port of a local ONNX-based inference engine."
+readme = "PORT_MAP.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "onnxruntime>=1.18",
+    "tiktoken>=0.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+physics-class-inference = "physics_class_inference.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["physics_class_inference*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
