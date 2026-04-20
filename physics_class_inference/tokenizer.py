@@ -12,8 +12,6 @@ def _import_tiktoken() -> Any:
 
 
 class Tokenizer:
-    """Tokenizer with GPT-2 BPE by default and byte fallback."""
-
     def __init__(self, backend: str = "auto") -> None:
         if backend not in {"auto", "gpt2", "byte"}:
             raise ValueError("Tokenizer backend must be one of: auto, gpt2, byte")
