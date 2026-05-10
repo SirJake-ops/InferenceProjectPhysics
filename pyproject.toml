@@ -9,6 +9,7 @@ description = "Python port of a local ONNX-based inference engine."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "matplotlib>=3.8",
     "numpy>=1.26",
     "onnxruntime>=1.18",
     "tiktoken>=0.9",
@@ -22,6 +23,7 @@ dev = [
 
 [project.scripts]
 physics-class-inference = "physics_class_inference.cli:main"
+physics-class-inference-batch = "physics_class_inference.batch_cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "."}

@@ -94,6 +94,17 @@ class CliTests(unittest.TestCase):
         self.assertEqual(exit_code, 0)
         self.assertEqual(generate_mock.call_args.kwargs["prompt"], "Hello from file")
 
+    def test_missing_prompt_file_exits_with_parser_error(self) -> None:
+        stderr = io.StringIO()
+
+        with patch("sys.argv", ["physics-class-inference", "--prompt-file", "missing-prompt.txt"]):
+            with redirect_stderr(stderr):
+                with self.assertRaises(SystemExit) as exit_context:
+                    main()
+
+        self.assertEqual(exit_context.exception.code, 2)
+        self.assertIn("could not read prompt file missing-prompt.txt", stderr.getvalue())
+
     def test_reads_prompt_from_stdin(self) -> None:
         stdout = io.StringIO()
 

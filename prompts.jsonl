@@ -1,0 +1,3 @@
+{"id": "energy-1", "prompt": "Explain conservation of energy in one sentence.", "expected_text": "Energy is conserved."}
+{"id": "speed-1", "prompt": "If a car travels 60 miles in 2 hours, what is its average speed?", "expected_text": "30 miles per hour"}
+{"id": "tokens-1", "prompt": "Answer with only the word OK.", "expected_token_ids": [79, 75]}

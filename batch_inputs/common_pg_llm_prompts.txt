@@ -1,0 +1,32 @@
+# Text batch comparison prompts for physics_class_inference.batch_cli.
+# Format:
+# prompt text ||| expected generated text
+#
+# Blank lines and lines starting with # are ignored.
+# Lines without ||| are still accepted, but they are prompt-only and will not
+# contribute to token mismatch comparisons.
+Answer with only the final number: If you have 12 notebooks and give away 5, how many remain? ||| 7
+Answer with only the final number: What is 17 multiplied by 24? ||| 408
+Answer with only the final value of x: Solve 3x + 7 = 22. ||| 5
+Answer with only the final fraction: Which is larger, 3/8 or 5/12? ||| 5/12
+Answer with only the final probability as a simplified fraction: A box has 4 red marbles and 6 blue marbles. What is the probability of drawing a red marble? ||| 2/5
+Answer with only the average speed: A car travels 60 miles in 2 hours. ||| 30 miles per hour
+Answer with only the arrival time: A train leaves at 3:00 PM and travels for 45 minutes. ||| 3:45 PM
+Answer yes or no: If all squares are rectangles, and this shape is a square, is it also a rectangle? ||| yes
+Answer yes or no: The notebook is on the desk, and the pencil is under the notebook. Is the pencil on top of the notebook? ||| no
+Answer true or false: Heavier objects always fall faster than lighter objects. ||| false
+Answer with only the Spanish translation: The experiment starts at noon. ||| El experimento empieza al mediodía.
+Answer with only the French translation: Please submit the report tomorrow. ||| Veuillez soumettre le rapport demain.
+Classify the sentiment as positive, neutral, or negative: The lecture was clear, but the room was too cold. ||| neutral
+Extract only the due date and time: The lab report must be submitted by Friday at 5 PM. ||| Friday at 5 PM
+Answer with one word: What is the force that pulls objects toward Earth? ||| gravity
+Answer with one word: What device measures temperature? ||| thermometer
+Answer with one word: What gas do plants take in during photosynthesis? ||| carbon dioxide
+Answer with only the SI unit: What is the SI unit of force? ||| newton
+Answer with only the SI unit: What is the SI unit of energy? ||| joule
+Answer with only the missing word: A tokenizer converts text into _____. ||| tokens
+Answer with only the missing word: ONNX Runtime is used to run machine learning _____. ||| models
+Answer with only the Python type name: What type is [1, 2, 3]? ||| list
+Answer with only the Python keyword used to define a function. ||| def
+Answer with only the result: In Python, what is len("cat")? ||| 3
+Answer with only the result: In Python, what is 10 // 3? ||| 3

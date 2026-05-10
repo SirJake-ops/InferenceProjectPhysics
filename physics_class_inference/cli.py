@@ -34,7 +34,10 @@ def _read_prompt(args: argparse.Namespace, parser: argparse.ArgumentParser) -> s
     if args.prompt is not None:
         return args.prompt
     if args.prompt_file is not None:
-        return args.prompt_file.read_text(encoding="utf-8")
+        try:
+            return args.prompt_file.read_text(encoding="utf-8")
+        except OSError as exc:
+            parser.error(f"could not read prompt file {args.prompt_file}: {exc}")
     if args.stdin:
         return sys.stdin.read()
     parser.error("one of --prompt, --prompt-file, or --stdin is required")
